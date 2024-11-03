@@ -1,10 +1,11 @@
 
+import { Box } from '@mui/material'
 import './App.css' //Bra att ha!
 
 function App() {
 
   return (
-    <div> Welcome to Bob Franks site! </div>
+    <Box> Welcome to Bob Frank Site baby!</Box>
   )
 }
 
