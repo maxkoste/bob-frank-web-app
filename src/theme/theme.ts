@@ -31,6 +31,11 @@ export const getDesignTokens = (mode: PaletteMode) => ({
                 },
             }),
     },
-});
+    typography: {
+        fontFamily: "'Roboto', sans-serif",
+        h4: {
+            fontFamily: "'Arial', sans-serif", 
+    },
+}});
 
 export default theme;
