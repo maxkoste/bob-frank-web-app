@@ -19,15 +19,16 @@ const AnimatedLink = styled(Link)(({ theme }) => ({
         width: '100%',
         height: '2px',
         top: 0 ,
-        left: 0,
+        left: '50%',
         backgroundColor: theme.palette.primary.main,
         transform: 'scaleX(0)',
-        transformOrigin: 'bottom right',
+        transformOrigin: 'center',
         transition: 'transform 0.3s ease',
     },
     '&:hover::after': {
         transform: 'scaleX(1)',
-        transformOrigin: 'bottom left',
+        width: '100%',
+        left: 0,
     },
 }));
 
@@ -42,8 +43,9 @@ function Navigation({ setRenderedContent }: ContentProps) {
             sx={{
                 display: "flex",
                 gap: 2,
-                justifyContent: "space-between",
-                alignItems: "center"
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: 2
             }}
         >
             {[
