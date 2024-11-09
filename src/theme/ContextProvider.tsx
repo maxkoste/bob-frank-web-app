@@ -5,7 +5,7 @@ import { useColorTheme } from "./use-color-theme";
 type ThemeContextType = {
     mode: string;
     toggleColorMode: () => void;
-    theme: Theme;
+    theme: any;
 };
 
 export const ThemeContext = createContext<ThemeContextType>({

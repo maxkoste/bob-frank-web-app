@@ -30,12 +30,14 @@ export const getDesignTokens = (mode: PaletteMode) => ({
                     secondary: grey[500],
                 },
             }),
+        typography: {
+            fontFamily: "'Josefine Sans', sans-serif",
+            h4: {
+                fontFamily: "'Josefin Sans', sans-serif",
+                fontWeight: 600,
+            },
+        }
     },
-    typography: {
-        fontFamily: "'Roboto', sans-serif",
-        h4: {
-            fontFamily: "'Arial', sans-serif", 
-    },
-}});
+});
 
 export default theme;
