@@ -10,31 +10,38 @@ type ContentProps = {
 };
 
 function Navigation({ setRenderedContent }: ContentProps) {
-    // Function to render links, improving scalability and reusability
-    const renderLink = (label: string, Component: React.ReactNode) => (
-        <Link 
-            underline="none" 
-            onClick={() => setRenderedContent(Component)}
-            role="button" 
-            sx={{ cursor: "pointer" }} 
-        >
-            <Typography sx={{ fontSize }}>{label}</Typography>
-        </Link>
-    );
 
     return (
         <Box
             sx={{
-                flex: 2,
                 display: "flex",
-                gap: 1,
+                gap: 2,
                 justifyContent: "space-between",
-                alignItems: "center",
+                alignItems: "center"
             }}
         >
-            {renderLink("HOME", <Home />)}
-            {renderLink("ABOUT", <About />)}
-            {renderLink("CONTACT", <Contact />)}
+            {[
+                { label: 'HOME', Component: <Home /> },
+                { label: 'ABOUT', Component: <About /> },
+                { label: 'CONTACT', Component: <Contact /> }
+            ].map((item) => (
+                <Link
+                    key={item.label}
+                    underline="none"
+                    onClick={() => setRenderedContent(item.Component)}
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        transition: 'transform 0.3s ease, color 0.3s ease', // Add transition
+                        '&:hover': {
+                            color: 'primary.main',       // Change color on hover
+                            transform: 'scale(1.1)',     // Scale up slightly on hover
+                        }
+                    }}
+                >
+                    <Typography sx={{ fontSize }}>{item.label}</Typography>
+                </Link>
+            ))}
         </Box>
     );
 }
