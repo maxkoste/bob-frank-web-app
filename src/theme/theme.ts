@@ -15,7 +15,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
                 primary: amber,
                 divider: amber[200],
                 text: {
-                    primary: grey[900],
+                    primary: "#f77f00",
                     secondary: grey[800],
                 },
             }
@@ -23,14 +23,20 @@ export const getDesignTokens = (mode: PaletteMode) => ({
                 primary: deepOrange,
                 divider: deepOrange[700],
                 background: {
-                    default: deepOrange[900],
-                    paper: deepOrange[900],
+                    default: "#003049",
                 },
                 text: {
                     primary: "#fff",
                     secondary: grey[500],
                 },
             }),
+        typography: {
+            fontFamily: "'Josefine Sans', sans-serif",
+            h4: {
+                fontFamily: "'Josefin Sans', sans-serif",
+                fontWeight: 600,
+            },
+        }
     },
 });
 

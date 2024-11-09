@@ -1,5 +1,3 @@
-
-import { Box } from '@mui/material'
 import './App.css' //Bra att ha!
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
