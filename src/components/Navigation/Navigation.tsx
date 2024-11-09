@@ -1,9 +1,35 @@
-import { Box, Link, Typography } from '@mui/material';
+import { Box, Link, Typography, styled } from '@mui/material';
 import Home from '../Pages/Home';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
 
 const fontSize = 15;
+
+const AnimatedLink = styled(Link)(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    position: 'relative',
+    transition: 'color 0.3s ease',
+    '&:hover': {
+        color: theme.palette.primary.main,
+    },
+    '&::after': {
+        content: '""',
+        position: 'absolute',
+        width: '100%',
+        height: '2px',
+        top: 0 ,
+        left: 0,
+        backgroundColor: theme.palette.primary.main,
+        transform: 'scaleX(0)',
+        transformOrigin: 'bottom right',
+        transition: 'transform 0.3s ease',
+    },
+    '&:hover::after': {
+        transform: 'scaleX(1)',
+        transformOrigin: 'bottom left',
+    },
+}));
 
 type ContentProps = {
     setRenderedContent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
@@ -25,22 +51,13 @@ function Navigation({ setRenderedContent }: ContentProps) {
                 { label: 'ABOUT', Component: <About /> },
                 { label: 'CONTACT', Component: <Contact /> }
             ].map((item) => (
-                <Link
+                <AnimatedLink
                     key={item.label}
                     underline="none"
                     onClick={() => setRenderedContent(item.Component)}
-                    sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        transition: 'transform 0.3s ease, color 0.3s ease', // Add transition
-                        '&:hover': {
-                            color: 'primary.main',       // Change color on hover
-                            transform: 'scale(1.1)',     // Scale up slightly on hover
-                        }
-                    }}
                 >
                     <Typography sx={{ fontSize }}>{item.label}</Typography>
-                </Link>
+                </AnimatedLink>
             ))}
         </Box>
     );
