@@ -1,10 +1,4 @@
-import { Container, Box } from '@mui/material'
 import './App.css' //Bra att ha!
-import Header from './components/Header/Header'
-import Content from './components/Content/Content'
-import { useState } from 'react';
-import Home from './components/Pages/Home';
-
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
 

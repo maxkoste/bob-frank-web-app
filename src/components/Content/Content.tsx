@@ -7,9 +7,9 @@ type ContentProps = {
 
 function Content({ renderedContent }: ContentProps) {
     return (
-        <div>
+        <>
             {renderedContent} {/* This will render the passed ReactNode */}
-        </div>
+        </>
     );
 }
 
