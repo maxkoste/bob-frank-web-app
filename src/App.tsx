@@ -1,19 +1,15 @@
-import './App.css' //Bra att ha!
-
-import { CssBaseline, ThemeProvider } from '@mui/material';
-
+import './App.css'
+import { useState, useEffect } from 'react'
 import MainDisplay from './components/MainDisplay/MainDisplay'
-import { useThemeContext } from './theme/ContextProvider';
 
 function App() {
-	const { theme } = useThemeContext()
+  const [darkMode, setDarkMode] = useState(false)
 
-	return (
-		<ThemeProvider theme={theme}>
-			<CssBaseline enableColorScheme />
-			<MainDisplay />
-		</ThemeProvider>
-	);
+  return (
+	<div className="bg-[url(/src/assets/city_street.JPG)] bg-fixed bg-cover h-screen">
+      <MainDisplay />
+    </div>
+  )
 }
 
 export default App
