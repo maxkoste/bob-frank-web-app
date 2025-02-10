@@ -1,10 +1,9 @@
+import React, {useState} from 'react'
 import './App.css'
 import './index.css'
-import { useState, useEffect } from 'react'
 import MainDisplay from './components/MainDisplay/MainDisplay'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false)
 
   return (
     <div className="relative">

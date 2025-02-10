@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Home from '../Pages/Home';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
@@ -9,6 +9,8 @@ type ContentProps = {
 
 function Navigation({ setRenderedContent }: ContentProps) {
 
+    const [visible, setVisible] = useState(true);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [activePage, setActivePage] = useState<'home' | 'about' | 'contact'>('home');
 
     const handleNavigation = (page : 'home' | 'about' | 'contact' , content: React.ReactNode) => {
@@ -17,11 +19,25 @@ function Navigation({ setRenderedContent }: ContentProps) {
   };
 
   const textColor = activePage === 'home' ? 'text-white' : 'text-black';
-
   const buttonClasses = `relative uppercase group transition-colors duration-300 font-bold ${textColor} hover:text-primary`;
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setVisible(prevScrollPos>currentScrollPos|| currentScrollPos<10);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-20">
+    <nav
+      className={`fixed top-0 left-0 w-full z-20 transition-transform duration-400 ${
+        visible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-center gap-x-8 p-4">
         <button
           onClick={() => handleNavigation('home', <Home />)}

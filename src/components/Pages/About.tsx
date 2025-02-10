@@ -75,7 +75,7 @@ function Collections(){
                className="group relative">
                 <img
                   src={callout.imageSrc}
-                  className="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                  className="w-full rounded-lg bg-white object-cover group-hover:scale-110 transition-transform duration-300 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
                 />
                 <h3 className="mt-6 text-sm text-gray-500">
                   <a href={callout.href}>
