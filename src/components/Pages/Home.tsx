@@ -32,7 +32,6 @@ const Home = () => {
             <path d="M8 5v14l11-7z" />
           </svg>
         </button>
-        <span className="mt-10 text-white font-bold tracking-wide text-lg">Listen to our music!</span>
       </div>
     </div>
   );
