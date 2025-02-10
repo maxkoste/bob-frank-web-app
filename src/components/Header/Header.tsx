@@ -14,7 +14,7 @@ function Header({setRenderedContent }: ContentProps) {
         <Box
             border={"2px solid"}
             sx={{
-                width: "100%",
+                  width: "100%",
                 display: "flex",
             }}
         >

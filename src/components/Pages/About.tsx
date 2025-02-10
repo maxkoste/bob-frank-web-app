@@ -28,6 +28,40 @@ const links = [
 function About() {
   return (
     <>
+    <Description />
+    <Collections />
+    <Example />
+    </>
+  )
+}
+
+function Description(){
+  return (
+    <div className="relative bg-white opacity-90">
+      <div className="bg-gray-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center py-16 sm:py-24 lg:py-32">
+            <div className="max-w-md p-12 bg-white rounded-lg">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">About us</h2>
+              <p className="text-base text-gray-800">
+                Bob Frank & the Lemon Curds embody the genuine and organic creative spirit that
+                characterised the psychedelic music scene of the 1960s, while also drawing inspiration from
+                their contemporaries such as Tame Impala, L’éclair, King Gizzard and the Lizard Wizard and Dungen.
+                <br /><br />
+                The band started playing together early 2022. Oskar Albertsson, Hjalmar Åhren (Jernstaden), Wa'el, and Max Koste put
+                their heads and sounds together and have since then challenged the fire safety capacity at venues in Malmö, Sweden
+                where they are based.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function Collections(){
+  return (
     <div className = "relative bg-white opacity-90">
       <div className="bg-gray-100">
     </div>
@@ -56,8 +90,6 @@ function About() {
         </div>
       </div>
     </div>
-    <Example />
-    </>
   )
 }
 
