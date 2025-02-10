@@ -1,75 +1,52 @@
-import { Box, Link, Typography, styled } from '@mui/material';
+import React, { useState } from 'react';
 import Home from '../Pages/Home';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
 
-const fontSize = 15;
-
-const AnimatedLink = styled(Link)(({ theme }) => ({
-    display: 'flex',
-    alignItems: 'center',
-    position: 'relative',
-    transition: 'color 0.3s ease',
-    '&:hover': {
-        color: theme.palette.primary.main,
-    },
-    '&::after': {
-        content: '""',
-        position: 'absolute',
-        width: '100%',
-        height: '2px',
-        top: 0 ,
-        left: '50%',
-        backgroundColor: theme.palette.primary.main,
-        transform: 'scaleX(0)',
-        transformOrigin: 'center',
-        transition: 'transform 0.3s ease',
-    },
-    '&:hover::after': {
-        transform: 'scaleX(1)',
-        width: '100%',
-        left: 0,
-    },
-}));
-
 type ContentProps = {
-    setRenderedContent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
+  setRenderedContent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
 };
 
 function Navigation({ setRenderedContent }: ContentProps) {
 
-    return (
-        <Box
-            sx={{
-                display: "flex",
-                gap: 3,
-                justifyContent: "center",
-                alignItems: "center",
-                marginTop: 2
-            }}
+    const [activePage, setActivePage] = useState<'home' | 'about' | 'contact'>('home');
+
+    const handleNavigation = (page : 'home' | 'about' | 'contact' , content: React.ReactNode) => {
+        setActivePage(page);
+        setRenderedContent(content);
+  };
+
+  const textColor = activePage === 'home' ? 'text-white' : 'text-black';
+
+  const buttonClasses = `relative uppercase group transition-colors duration-300 font-bold ${textColor} hover:text-primary`;
+
+  return (
+    <nav className="fixed top-0 left-0 w-full z-20">
+      <div className="container mx-auto flex items-center justify-center gap-x-8 p-4">
+        <button
+          onClick={() => handleNavigation('home', <Home />)}
+          className={buttonClasses}
         >
-            {[
-                { label: 'HOME', Component: <Home /> },
-                { label: 'ABOUT', Component: <About /> },
-                { label: 'CONTACT', Component: <Contact /> }
-            ].map((item) => (
-                <AnimatedLink
-                    key={item.label}
-                    underline="none"
-                    onClick={() => setRenderedContent(item.Component)}
-                >
-                    <Typography sx={{
-                         fontSize,
-                         fontWeight: 600,
-                         fontFamily: "'Josefine Sans', sans-serif" 
-                         }}
-                    >
-                        {item.label}
-                    </Typography>
-                </AnimatedLink>
-            ))}
-        </Box>
-    );
+          Home
+          <span className="absolute left-0 bottom-0 block h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full" />
+        </button>
+        <button
+          onClick={() => handleNavigation('about', <About />)}
+          className={buttonClasses}
+        >
+          About
+          <span className="absolute left-0 bottom-0 block h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full" />
+        </button>
+        <button
+          onClick={() => handleNavigation('about', <Contact />)}
+          className={buttonClasses}
+        >
+          Contact
+          <span className="absolute left-0 bottom-0 block h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full" />
+        </button>
+      </div>
+    </nav>
+  );
 }
 
 export default Navigation;

@@ -1,26 +1,22 @@
 import React from 'react';
-import { Button, Box } from '@mui/material';
 
 const Home = () => {
   return (
-    <div>
-      <Box
-        sx={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          textAlign: "center",
-        }}
+    <div className="flex flex-col items-center justify-center h-screen">
+      <p className="bg-white bg-clip-text text-5xl font-extrabold text-transparent border-4 p-4">
+        EP DERECHO OUT NOW
+      </p>
+      <button
+        className="mt-12 bg-gradient-to-r from-green-500 to-orange-500 text-white font-bold py-4 px-4 hover:scale-120 rounded-full"
+        onClick={() =>
+          window.open(
+            "https://open.spotify.com/album/21YdZwzgUhpT3gRFoQOCuG?si=JNC1eheoRBu0ZFWoyMaNIw",
+            "_blank"
+          )
+        }
       >
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => window.open("https://open.spotify.com/album/21YdZwzgUhpT3gRFoQOCuG?si=JNC1eheoRBu0ZFWoyMaNIw", "_blank")}
-        >
-          New EP Out Now!
-        </Button>
-      </Box>
+        Listen to our music
+      </button>
     </div>
   );
 };
