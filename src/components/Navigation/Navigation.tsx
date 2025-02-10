@@ -44,21 +44,23 @@ function Navigation({ setRenderedContent }: ContentProps) {
           className={buttonClasses}
         >
           Home
-          <span className="absolute left-0 bottom-0 block h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full" />
+          <span
+            className="absolute left-0 bottom-[-3px] block h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full" 
+            />
         </button>
         <button
           onClick={() => handleNavigation('about', <About />)}
           className={buttonClasses}
         >
           About
-          <span className="absolute left-0 bottom-0 block h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full" />
+          <span className="absolute left-0 bottom-[-3px] block h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full" />
         </button>
         <button
           onClick={() => handleNavigation('about', <Contact />)}
           className={buttonClasses}
         >
           Contact
-          <span className="absolute left-0 bottom-0 block h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full" />
+          <span className="absolute left-0 bottom-[-3px] block h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full" />
         </button>
       </div>
     </nav>
