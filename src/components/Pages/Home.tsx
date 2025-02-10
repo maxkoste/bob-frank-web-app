@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <p className="bg-white bg-clip-text text-4xl font-extrabold text-transparent border-4 p-4">
+      <p className="bg-white bg-clip-text text-4xl font-mono font-extrabold text-transparent border-4 p-4">
         EP 'DERECHO' OUT NOW
       </p>
       <div className="mt-12 flex flex-col items-center">
@@ -32,7 +32,7 @@ const Home = () => {
             <path d="M8 5v14l11-7z" />
           </svg>
         </button>
-        <span className="mt-10 text-white font-normal text-lg">Listen to our music!</span>
+        <span className="mt-10 text-white font-bold tracking-wide text-lg">Listen to our music!</span>
       </div>
     </div>
   );
