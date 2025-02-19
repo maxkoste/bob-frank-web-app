@@ -2,6 +2,7 @@ import React from 'react';
 
 function Contact() {
   return (
+    <div className="animate-fadeSlideDownSimple">
     <div className="bg-white/80 flex flex-col items-center justify-start min-h-screen pt-30 px-4">
       <h1 className="text-4xl font-mono font-extrabold text-gray-900 mb-8">
         CONTACT
@@ -53,6 +54,7 @@ function Contact() {
         <p className="font-bold text-gray-800">Or reach us directly:</p>
         <p className="text-gray-700">Email: bobfranklemoncurds@mgmt.com</p>
       </div>
+    </div>
     </div>
   );
 }

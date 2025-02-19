@@ -4,7 +4,7 @@ const callouts = [
   {
     name: 'Schedule',
     description: 'SHOWS',
-    imageSrc: 'src/assets/live.JPG',
+    imageSrc: 'src/assets/wael.JPG',
     href: '#', //insert link to schedule
   },
   {
@@ -16,7 +16,7 @@ const callouts = [
   {
     name: 'Link to our music',
     description: 'MUSIC',
-    imageSrc: 'src/assets/hjalmar.JPG',
+    imageSrc: 'src/assets/derecho.png',
     href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
   },
 ]
@@ -27,52 +27,61 @@ const links = [
 
 function About() {
   return (
-    <>
-    <Description />
-    <Collections />
-    <Example />
-    </>
+    <div className="animate-fadeSlideDownSimple">
+      <GiantTextImage />
+      <Description />
+      <Collections />
+      <Example />
+    </div>
   )
 }
 
-function Description(){
+function GiantTextImage() {
   return (
-    <div className="relative bg-white">
-      <div className="bg-gray-100">
-        <div className="mx-auto max-w-10xl px-4 sm:px-20 lg:px-8">
-          <div className="flex justify-center py-16 sm:py-24 lg:py-32">
-            <div className="max-w-md p-12 bg-white rounded-lg">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">About us</h2>
-              <p className="text-base text-gray-800">
-                Bob Frank & the Lemon Curds embody the genuine and organic creative spirit that
-                characterised the psychedelic music scene of the 1960s, while also drawing inspiration from
-                their contemporaries such as Tame Impala, L’éclair, King Gizzard and the Lizard Wizard and Dungen.
-                <br /><br />
-                The band started playing together early 2022. Oskar Albertsson, Hjalmar Åhren (Jernstaden), Wa'el, and Max Koste put
-                their heads and sounds together and have since then challenged the fire safety capacity at venues in Malmö, Sweden
-                where they are based.
-              </p>
-            </div>
-          </div>
-        </div>
+    <div className="w-full h-screen bg-white flex justify-center items-center overflow-hidden">
+      <img 
+        src="src/assets/BOBFRANK.png" 
+        alt="Bob Frank" 
+        className="object-contain max-w-full max-h-screen"
+      />
+    </div>
+  )
+}
+
+function Description() {
+  return (
+    <div className="relative bg-white py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-6">
+          About us
+        </h2>
+        <p className="text-2xl lg:text-3xl font-serif text-gray-800 leading-relaxed">
+          Bob Frank &amp; the Lemon Curds embody the genuine and organic creative spirit that
+          characterised the psychedelic music scene of the 1960s, while also drawing inspiration from
+          their contemporaries such as Tame Impala, L’éclair, King Gizzard and the Lizard Wizard and Dungen.
+          <br /><br />
+          The band started playing together early 2022. Oskar Albertsson, Hjalmar Åhren (Jernstaden), Wa&apos;el, and
+          Max Koste put their heads and sounds together and have since then challenged the fire safety capacity at
+          venues in Malmö, Sweden where they are based.
+        </p>
       </div>
     </div>
   )
 }
 
-function Collections(){
+function Collections() {
   return (
-    <div className = "relative bg-white opacity-90">
+    <div className="relative bg-white">
       <div className="bg-gray-100">
-    </div>
+      </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
           <h2 className="text-2xl font-bold text-gray-900">Collections</h2>
 
-          <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+          <div className="mt-6 space-y-16 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
             {callouts.map((callout) => (
               <div key={callout.name}
-               className="group relative">
+                className="group relative">
                 <img
                   src={callout.imageSrc}
                   className="w-full rounded-lg bg-white object-cover group-hover:scale-110 transition-transform duration-300 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
@@ -124,10 +133,10 @@ function Example() {
           <p className="mt-8 text-lg font-medium text-pretty white sm:text-xl/8">
           </p>
         </div>
-        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none hover:scale-105 transition-transform duration-300">
+        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none transition-transform duration-300">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
-              <a 
+              <a
                 key={link.name}
                 href={"mailto:maxkoste@gmail.com"}
               >

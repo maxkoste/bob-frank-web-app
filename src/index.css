@@ -3,3 +3,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slideIn {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+
+  @keyframes slideInRefined {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(15px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slideInRefined {
+    animation: slideInRefined 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  }
+
+  @keyframes fadeSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+    80% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeSlideDown {
+    animation: fadeSlideDown 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  }
+  @keyframes fadeSlideDownSimple {
+    0% {
+      opacity: 0.7;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeSlideDownSimple {
+    animation: fadeSlideDownSimple 0.6s ease-out forwards;
+  }

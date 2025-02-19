@@ -2,6 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
+    <div className="animate-fadeSlideDownSimple">
     <div className="flex flex-col justify-center h-screen">
       <p className="bg-white bg-clip-text text-4xl text-center font-mono font-extrabold text-transparent border-4 p-4">
         EP 'DERECHO' OUT NOW
@@ -33,6 +34,7 @@ const Home = () => {
           </svg>
         </button>
       </div>
+    </div>
     </div>
   );
 };
