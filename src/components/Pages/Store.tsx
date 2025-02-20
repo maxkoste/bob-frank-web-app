@@ -4,7 +4,7 @@ const callouts = [
     {
     //   name: 'Schedule',
     //   description: 'SHOWS',
-      imageSrc: 'src/assets/wael.JPG',
+      imageSrc: 'src/assets/Merch1.JPEG',
       href: '#', //insert link to schedule
     },
     {
@@ -16,29 +16,42 @@ const callouts = [
     {
     //   name: 'Link to our music',
       // description: 'MUSIC',
-      imageSrc: 'src/assets/derecho.png',
-      href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
-    },
-    {
-    //   name: 'Link to our music',
-    //   description: 'MUSIC',
-      imageSrc: 'src/assets/DERECHO POSTER.png',
-      href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
-    },
-    {
-    //   name: 'Link to our music',
-    //   description: 'MUSIC',
       imageSrc: 'src/assets/Grand Poster A3.jpg',
       href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
-    },
+    }
+    // {
+    // //   name: 'Link to our music',
+    // //   description: 'MUSIC',
+    //   imageSrc: 'src/assets/DERECHO POSTER.png',
+    //   href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
+    // },
+    // {
+    // //   name: 'Link to our music',
+    // //   description: 'MUSIC',
+    //   imageSrc: 'src/assets/Grand Poster A3.jpg',
+    //   href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
+    // },
   ]
 
 function Store() {
     return (
         <div className="animate-fadeSlideDownSimple">
+            <GiantTextImage />
             <Images />
         </div>
     );
+}
+
+function GiantTextImage() {
+  return (
+    <div className="w-full h-screen bg-[url(/background/drums.jpg)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
+      <img 
+        src="src/assets/Merchdrop.png" 
+        alt="Bob Frank" 
+        className="animate-slideIn object-contain max-w-full max-h-screen"
+      />
+    </div>
+  )
 }
 
 function Images(){

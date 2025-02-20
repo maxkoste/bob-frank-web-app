@@ -38,7 +38,7 @@ function About() {
 
 function GiantTextImage() {
   return (
-    <div className="w-full h-screen bg-[url(/background/BG3.jpg)] bg-fixed bg-cover flex justify-center items-center overflow-hidden">
+    <div className="w-full h-screen bg-[url(/background/C1.jpg)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
       <img 
         src="src/assets/BOBFRANK.png" 
         alt="Bob Frank" 
