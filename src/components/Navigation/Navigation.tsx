@@ -12,16 +12,42 @@ type ContentProps = {
 };
 
 function Navigation({ setRenderedContent }: ContentProps) {
+
+  const [activePage, setActivePage] = useState<'home' | 'about' | 'store' | 'contact'>(() => {
+    return (localStorage.getItem('activePage') as 'home' | 'about' | 'store' | 'contact') || 'home';
+  });
   const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [activePage, setActivePage] = useState<'home' | 'about' | 'contact'>('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleNavigation = (page: 'home' | 'about' | 'contact', content: React.ReactNode) => {
+  const handleNavigation = (page: 'home' | 'about' | 'store' | 'contact', content: React.ReactNode) => {
     setActivePage(page);
     setRenderedContent(content);
     setMobileMenuOpen(false); // close the mobile menu upon navigation
   };
+
+  useEffect(() => {
+    switch (activePage) {
+      case 'home':
+        setRenderedContent(<Home />);
+        break;
+      case 'about':
+        setRenderedContent(<About />);
+        break;
+      case 'store':
+        setRenderedContent(<Store />);
+        break;
+      case 'contact':
+        setRenderedContent(<Contact />);
+        break;
+      default:
+        setRenderedContent(<Home />);
+    }
+  }, []); // empty dependency array ensures this runs only once on mount
+
+  useEffect(() => {
+    localStorage.setItem('activePage', activePage);
+  }, [activePage]);
 
   // Desktop-specific classes (on mobile the logo will be inline)
   const logoClasses = activePage === 'home' && !mobileMenuOpen
@@ -94,11 +120,11 @@ function Navigation({ setRenderedContent }: ContentProps) {
           About
           <span className="absolute left-0 bottom-[-3px] block h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full" />
         </button>
-        <button onClick={() => handleNavigation('about', <Store />)} className={buttonClasses}>
+        <button onClick={() => handleNavigation('store', <Store />)} className={buttonClasses}>
           Merch
           <span className="absolute left-0 bottom-[-3px] block h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full" />
         </button>
-        <button onClick={() => handleNavigation('about', <Contact />)} className={buttonClasses}>
+        <button onClick={() => handleNavigation('contact', <Contact />)} className={buttonClasses}>
           Contact
           <span className="absolute left-0 bottom-[-3px] block h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full" />
         </button>
