@@ -5,18 +5,22 @@
 @tailwind utilities;
 
 @keyframes slideIn {
-    from {
+    0% {
       opacity: 0;
       transform: translateX(-100%);
     }
-    to {
+    60% {
+      opacity: 1;
+      transform: translateX(30px);
+    }
+    100% {
       opacity: 1;
       transform: translateX(0);
     }
   }
   
   .animate-slideIn {
-    animation: slideIn 0.5s ease-out forwards;
+    animation: slideIn 1s ease-out forwards;
   }
 
   @keyframes slideInRefined {

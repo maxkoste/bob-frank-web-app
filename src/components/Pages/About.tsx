@@ -38,11 +38,11 @@ function About() {
 
 function GiantTextImage() {
   return (
-    <div className="w-full h-screen bg-white flex justify-center items-center overflow-hidden">
+    <div className="w-full h-screen bg-[url(/background/BG3.jpg)] bg-fixed bg-cover flex justify-center items-center overflow-hidden">
       <img 
         src="src/assets/BOBFRANK.png" 
         alt="Bob Frank" 
-        className="object-contain max-w-full max-h-screen"
+        className="animate-slideIn object-contain max-w-full max-h-screen"
       />
     </div>
   )
