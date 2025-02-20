@@ -16,7 +16,7 @@ const callouts = [
   {
     name: 'Link to our music',
     description: 'MUSIC',
-    imageSrc: 'src/assets/derecho.png',
+    imageSrc: 'src/assets/Grand Poster A3.jpg',
     href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
   },
 ]
