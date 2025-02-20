@@ -1,5 +1,4 @@
-import { Box, Typography, Link } from "@mui/material";
-import { useState } from "react";
+import { Box} from "@mui/material";
 import Navigation from "../Navigation/Navigation";
 import Logo from "../Logo/Logo";
 import Social from "../Social/Social";

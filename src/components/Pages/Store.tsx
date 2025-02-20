@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const callouts = [
     {
@@ -48,7 +48,7 @@ function GiantTextImage() {
       <img 
         src="src/assets/Merchdrop.png" 
         alt="Bob Frank" 
-        className="animate-slideIn object-contain max-w-full max-h-screen"
+        className="animate-fadeSlideDownSimple object-contain max-w-full max-h-screen"
       />
     </div>
   )

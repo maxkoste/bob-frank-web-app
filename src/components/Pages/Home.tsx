@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
         >
           {/* Gradient overlay: translates in from left on hover */}
           <span
-            className="absolute inset-0 bg-gradient-to-r from-green-500 to-cyan-500 transform
+            className="absolute inset-0 transform
              -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 
              transition-all duration-300 ease-in-out filter blur-sm"
           />

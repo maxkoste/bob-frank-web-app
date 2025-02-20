@@ -1,19 +1,4 @@
-import React, { useState } from 'react'
-import './App.css'
-import './index.css'
 import MainDisplay from './components/MainDisplay/MainDisplay'
-
-const images = [
-  '/background/city_street.JPG',
-  '/background/BG3.jpg',
-  '/background/BG2.jpg',
-  '/background/C1.jpg'
-];
-
-const transitionDuration = 1000; // in ms
-const displayDuration = 5000; // in ms
-
-
 
 function App() {
   return (

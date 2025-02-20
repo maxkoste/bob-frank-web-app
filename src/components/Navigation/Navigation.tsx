@@ -5,7 +5,6 @@ import Home from '../Pages/Home';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
 import Store from '../Pages/Store';
-import Social from '../Social/Social';
 
 type ContentProps = {
   setRenderedContent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
