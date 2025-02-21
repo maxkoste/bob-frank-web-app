@@ -94,9 +94,9 @@ function Navigation({ setRenderedContent }: ContentProps) {
     >
       {/* Desktop Navigation */}
       <div className="hidden md:flex container mx-auto flex items-center justify-center gap-x-6 p-6">
-        <img src="src/assets/studioJupiterText.png" className={logoClasses} alt="Logo" />
+        <img src="/background/studioJupiterText.png" className={logoClasses} alt="Logo" />
         <img
-          src="src/assets/spotifyBlack.png"
+          src="/background/spotifyBlack.png"
           onClick={() =>
             window.open("https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap", "_blank")
           }
@@ -104,7 +104,7 @@ function Navigation({ setRenderedContent }: ContentProps) {
           alt="Spotify"
         />
         <img
-          src="src/assets/instagram_Glyph_Black.png"
+          src="/background/instagram_Glyph_Black.png"
           onClick={() =>
             window.open("https://www.instagram.com/bobfranklemoncurds/", "_blank")
           }
@@ -138,7 +138,7 @@ function Navigation({ setRenderedContent }: ContentProps) {
               <span className="sr-only">Your Company</span>
               <img
                 alt="Logo"
-                src="src/assets/studioJupiterText.png"
+                src="/background/studioJupiterText.png"
                 className={logoClasses}
               />
             </a>
@@ -163,7 +163,7 @@ function Navigation({ setRenderedContent }: ContentProps) {
                 <span className="sr-only">Your Company</span>
                 <img
                   alt="Logo"
-                  src="src/assets/studioJupiterText.png"
+                  src="/background/studioJupiterText.png"
                   className="h-8 w-auto"
                 />
               </a>
@@ -207,7 +207,7 @@ function Navigation({ setRenderedContent }: ContentProps) {
                 </div>
                 <div className="flex justify-left gap-4 mt-6">
                   <img
-                    src="src/assets/instagram_Glyph_Black.png"
+                    src="/background/instagram_Glyph_Black.png"
                     onClick={() =>
                       window.open("https://www.instagram.com/bobfranklemoncurds/", "_blank")
                     }
@@ -215,7 +215,7 @@ function Navigation({ setRenderedContent }: ContentProps) {
                     alt="Instagram"
                   />
                   <img
-                    src="src/assets/spotifyBlack.png"
+                    src="/background/spotifyBlack.png"
                     onClick={() =>
                       window.open("https://www.instagram.com/bobfranklemoncurds/", "_blank")
                     }
