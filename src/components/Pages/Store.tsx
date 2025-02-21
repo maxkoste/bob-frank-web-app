@@ -4,19 +4,19 @@ const callouts = [
     {
     //   name: 'Schedule',
     //   description: 'SHOWS',
-      imageSrc: '/background/MERCH IG.png',
+      imageSrc: './background/MERCH IG.png',
       href: '#', //insert link to schedule
     },
     {
     //   name: 'Tshirts & prints',
     //   description: 'MERCH',
-      imageSrc: '/background/march2.JPG',
+      imageSrc: './background/march2.JPG',
       href: '#', //insert link to merch store
     },
     {
     //   name: 'Link to our music',
       // description: 'MUSIC',
-      imageSrc: '/background/Grand Poster A3.jpg',
+      imageSrc: './background/Grand Poster A3.jpg',
       href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
     }
     // {
@@ -44,9 +44,9 @@ function Store() {
 
 function GiantTextImage() {
   return (
-    <div className="w-full h-screen bg-[url(/background/drums.jpg)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
+    <div className="w-full h-screen bg-[url(./background/drums.jpg)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
       <img 
-        src="/background/Merchdrop.png" 
+        src="./background/Merchdrop.png" 
         alt="Bob Frank" 
         className="animate-fadeSlideDownSimple object-contain max-w-full max-h-screen"
       />

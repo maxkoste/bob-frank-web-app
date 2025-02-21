@@ -3,19 +3,19 @@ const callouts = [
   {
     name: 'Schedule',
     description: 'SHOWS',
-    imageSrc: '/background/wael.JPG',
+    imageSrc: './background/wael.JPG',
     href: '#', //insert link to schedule
   },
   {
     name: 'Tshirts & prints',
     description: 'MERCH',
-    imageSrc: '/background/march2.JPG',
+    imageSrc: './background/march2.JPG',
     href: '#', //insert link to merch store
   },
   {
     name: 'Link to our music',
     description: 'MUSIC',
-    imageSrc: '/background/Grand Poster A3.jpg',
+    imageSrc: './background/Grand Poster A3.jpg',
     href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
   },
 ]
@@ -37,9 +37,9 @@ function About() {
 
 function GiantTextImage() {
   return (
-    <div className="w-full h-screen bg-[url(/background/C1.jpg)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
+    <div className="w-full h-screen bg-[url(./background/C1.jpg)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
       <img 
-        src="/background/BOBFRANK.png" 
+        src="./background/BOBFRANK.png" 
         alt="Bob Frank" 
         className="animate-slideIn object-contain max-w-full max-h-screen"
       />
@@ -106,7 +106,7 @@ function Example() {
     <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32">
       <img
         alt=""
-        src="/background/band_pic.JPG"
+        src="./background/band_pic.JPG"
         className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center"
       />
       <div
