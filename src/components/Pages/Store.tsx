@@ -44,7 +44,7 @@ function Store() {
 
 function GiantTextImage() {
   return (
-    <div className="w-full h-screen bg-[url(./background/drums.jpg)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
+    <div className="w-full h-screen bg-[url(/background/drums.jpg)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
       <img 
         src="./background/Merchdrop.png" 
         alt="Bob Frank" 
