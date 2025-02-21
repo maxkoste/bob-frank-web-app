@@ -52,7 +52,7 @@ function Description() {
     <div className="relative bg-white py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-6">
-          About us
+          WELCOME TO THE BOB-FRANKIEVERSE!
         </h2>
         <p className="text-2xl lg:text-3xl font-serif text-gray-800 leading-relaxed">
           Bob Frank &amp; the Lemon Curds embody the genuine and organic creative spirit that
