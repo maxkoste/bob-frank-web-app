@@ -4,7 +4,7 @@ const callouts = [
     {
     //   name: 'Schedule',
     //   description: 'SHOWS',
-      imageSrc: '/background/Merch1.JPEG',
+      imageSrc: '/background/MERCH IG.png',
       href: '#', //insert link to schedule
     },
     {
