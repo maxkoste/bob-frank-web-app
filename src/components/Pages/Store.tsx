@@ -4,7 +4,7 @@ const callouts = [
     {
     //   name: 'Schedule',
     //   description: 'SHOWS',
-      imageSrc: './background/MERCH IG.png',
+      imageSrc: './background/merch1.JPEG',
       href: '#', //insert link to schedule
     },
     {
@@ -37,6 +37,7 @@ function Store() {
     return (
         <div className="animate-fadeSlideDownSimple">
             <GiantTextImage />
+            <Description />
             <Images />
         </div>
     );
@@ -44,12 +45,30 @@ function Store() {
 
 function GiantTextImage() {
   return (
-    <div className="w-full h-screen bg-[url(/background/drums.jpg)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
+    <div className="w-full h-screen bg-[url(/background/drums.png)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
       <img 
         src="./background/Merchdrop.png" 
         alt="Bob Frank" 
         className="animate-fadeSlideDownSimple object-contain max-w-full max-h-screen"
       />
+    </div>
+  )
+}
+
+function Description() {
+  return (
+    <div className="relative bg-white py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-6">
+          We have merch!
+        </h2>
+        <p className="text-2xl lg:text-3xl font-serif text-gray-800 leading-relaxed">
+          Support the band and get an awesome tshirt or poster.
+          Hand-printed silk screen on stanley stella creator tshirts. Brought to you by the very talented Samuel Krantz at Lucky days prints.
+          The best quality, cruelty free tshirts money can buy.
+          Currently we dont have an online store for our merch, but we can send it to you on request!
+        </p>
+      </div>
     </div>
   )
 }

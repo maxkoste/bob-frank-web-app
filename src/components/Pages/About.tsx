@@ -3,7 +3,7 @@ const callouts = [
   {
     name: 'Schedule',
     description: 'SHOWS',
-    imageSrc: './background/wael.JPG',
+    imageSrc: './background/live.JPG',
     href: '#', //insert link to schedule
   },
   {
@@ -15,7 +15,7 @@ const callouts = [
   {
     name: 'Link to our music',
     description: 'MUSIC',
-    imageSrc: './background/Grand Poster A3.jpg',
+    imageSrc: './background/bandm.png',
     href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
   },
 ]
@@ -37,7 +37,7 @@ function About() {
 
 function GiantTextImage() {
   return (
-    <div className="w-full h-screen bg-[url(/background/C1.jpg)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
+    <div className="w-full h-screen bg-[url(/background/bandm.png)] bg-fixed bg-cover bg-center flex justify-center items-center overflow-hidden">
       <img 
         src="./background/BOBFRANK.png" 
         alt="Bob Frank" 
@@ -52,7 +52,7 @@ function Description() {
     <div className="relative bg-white py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-6">
-          WELCOME TO THE BOB-FRANKIEVERSE!
+          About us
         </h2>
         <p className="text-2xl lg:text-3xl font-serif text-gray-800 leading-relaxed">
           Bob Frank &amp; the Lemon Curds embody the genuine and organic creative spirit that
