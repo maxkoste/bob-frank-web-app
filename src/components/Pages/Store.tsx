@@ -13,12 +13,12 @@ const callouts = [
       imageSrc: './background/march2.JPG',
       href: '#', //insert link to merch store
     },
-    {
-    //   name: 'Link to our music',
-      // description: 'MUSIC',
-      imageSrc: './background/Grand Poster A3.jpg',
-      href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
-    }
+    // {
+    // //   name: 'Link to our music',
+    //   // description: 'MUSIC',
+    //   imageSrc: './background/Grand Poster A3.jpg',
+    //   href: 'https://open.spotify.com/artist/1zTqJDwJnt5MA4Rvvn21Ap?si=vBSmmNXCRieEJP2RC2RupA', //insert link to music
+    // }
     // {
     // //   name: 'Link to our music',
     // //   description: 'MUSIC',
